@@ -24,14 +24,6 @@ const std::string mousePrefix = "-event-mouse";
 
 struct input_event events[64];
 
-enum error_codes {
-  kSuccess = 0,
-  kError = 1,
-  kFileNotFound = 2,
-
-};
-
-// mouse buttons
 std::string get_input_g600_path() {
   printf("checking for G600 \n");
   if (!std::filesystem::exists(kDir.c_str())) {
@@ -58,7 +50,9 @@ std::string get_input_g600_path() {
 }
 
 int main() {
+  std::map<std::string, std::string> upCommands;
   std::map<std::string, std::string> downCommands;
+
   //[scancode] = "command to run",
   downCommands["30"] = "xdotool key F1";  // G9
   downCommands["31"] = "xdotool key F1";  // G10
@@ -73,8 +67,6 @@ int main() {
   downCommands["45"] = "xdotool key F1";  // G19
   downCommands["46"] = "xdotool key F1";  // G20
 
-  std::map<std::string, std::string> upCommands;
-
   printf("starting G600 linux contoller \n");
 
   std::string path = get_input_g600_path();
@@ -83,13 +75,13 @@ int main() {
   std::ifstream inputFile;
 
   int fd = open(path.c_str(), O_RDONLY);
-
   if (fd < 0) {
     printf("could not open file, trying using sudo \n");
-    return error_codes::kError;
+    return 1;
   } else {
     printf("opened file \n");
   }
+
   // grab the linux input event
   ioctl(fd, EVIOCGRAB, 1);
   printf("grabbed input \n");
@@ -114,7 +106,8 @@ int main() {
     printf("cmd: %s \n", cmdToRun.c_str());
     system(cmdToRun.c_str());
   }
+
   close(fd);
-  return error_codes::kSuccess;
+  return 0;
 }
 
