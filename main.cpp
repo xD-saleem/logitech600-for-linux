@@ -60,18 +60,18 @@ std::string get_input_g600_path() {
 int main() {
   std::map<std::string, std::string> downCommands;
   //[scancode] = "command to run",
-  downCommands["30"] = "echo 'todo'";  // G9
-  downCommands["31"] = "echo 'todo'";  // G10
-  downCommands["32"] = "echo 'todo'";  // G11
-  downCommands["33"] = "echo 'todo'";  // G12
-  downCommands["34"] = "echo 'todo'";  // G13
-  downCommands["35"] = "echo 'todo'";  // G14
-  downCommands["36"] = "echo 'todo'";  // G15
-  downCommands["37"] = "echo 'todo'";  // G16
-  downCommands["38"] = "echo 'todo'";  // G17
-  downCommands["39"] = "echo 'todo'";  // G18
-  downCommands["45"] = "echo 'todo'";  // G19
-  downCommands["46"] = "echo 'todo'";  // G20
+  downCommands["30"] = "xdotool key F1";  // G9
+  downCommands["31"] = "xdotool key F1";  // G10
+  downCommands["32"] = "xdotool key F3";  // G11
+  downCommands["33"] = "xdotool key F1";  // G12
+  downCommands["34"] = "xdotool key F2";  // G13
+  downCommands["35"] = "xdotool key F4";  // G14
+  downCommands["36"] = "xdotool key F1";  // G15
+  downCommands["37"] = "xdotool key F1";  // G16
+  downCommands["38"] = "xdotool key F1";  // G17
+  downCommands["39"] = "xdotool key F1";  // G18
+  downCommands["45"] = "xdotool key F1";  // G19
+  downCommands["46"] = "xdotool key F1";  // G20
 
   std::map<std::string, std::string> upCommands;
 
