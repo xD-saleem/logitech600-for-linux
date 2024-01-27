@@ -54,10 +54,10 @@ int main() {
   std::map<std::string, std::string> downCommands;
 
   //[scancode] = "command to run",
-  downCommands["30"] = "xdotool key F1";  // G9
+  downCommands["30"] = "xdotool key F";   // G9
   downCommands["31"] = "xdotool key F1";  // G10
   downCommands["32"] = "xdotool key F3";  // G11
-  downCommands["33"] = "xdotool key F1";  // G12
+  downCommands["33"] = "xdotool key R";   // G12
   downCommands["34"] = "xdotool key F2";  // G13
   downCommands["35"] = "xdotool key F4";  // G14
   downCommands["36"] = "xdotool key F1";  // G15
@@ -67,10 +67,10 @@ int main() {
   downCommands["45"] = "xdotool key F1";  // G19
   downCommands["46"] = "xdotool key F1";  // G20
 
-  downCommands["89"] = "xdotool key F1";  // G9
+  downCommands["89"] = "xdotool key F";   // G9
   downCommands["90"] = "xdotool key F1";  // G10
   downCommands["91"] = "xdotool key F3";  // G11
-  downCommands["92"] = "xdotool key F1";  // G12
+  downCommands["92"] = "xdotool key R";   // G12
   downCommands["93"] = "xdotool key F2";  // G13
   downCommands["94"] = "xdotool key F4";  // G14
   downCommands["95"] = "xdotool key F1";  // G15
